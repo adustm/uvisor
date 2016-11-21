@@ -481,6 +481,15 @@ void vmpu_arch_init_hw(void)
         subregions_disable_mask
     );
 
+    /* FIXME: Hacky */
+    vmpu_mpu_set_static_acl(
+       2,
+       (uint32_t) 0x20000000,
+       192 * 1024,
+       UVISOR_TACLDEF_DATA | UVISOR_TACL_EXECUTE,
+       0
+    );
+			    
     /* On page heap alignments:
      *
      * Individual pages in the page heap are protected by subregions.

@@ -240,14 +240,14 @@ static void vmpu_load_boxes(void)
     uint8_t box_id;
 
     /* Check heap start and end addresses. */
-    if (!__uvisor_config.heap_start || !vmpu_sram_addr((uint32_t) __uvisor_config.heap_start)) {
-        HALT_ERROR(SANITY_CHECK_FAILED, "Heap start pointer (0x%08x) is not in SRAM memory.\n",
-            (uint32_t) __uvisor_config.heap_start);
-    }
-    if (!__uvisor_config.heap_end || !vmpu_sram_addr((uint32_t) __uvisor_config.heap_end)) {
-        HALT_ERROR(SANITY_CHECK_FAILED, "Heap end pointer (0x%08x) is not in SRAM memory.\n",
-            (uint32_t) __uvisor_config.heap_end);
-    }
+//    if (!__uvisor_config.heap_start || !vmpu_sram_addr((uint32_t) __uvisor_config.heap_start)) {
+//        HALT_ERROR(SANITY_CHECK_FAILED, "Heap start pointer (0x%08x) is not in SRAM memory.\n",
+ //           (uint32_t) __uvisor_config.heap_start);
+  //  }
+//    if (!__uvisor_config.heap_end || !vmpu_sram_addr((uint32_t) __uvisor_config.heap_end)) {
+ //       HALT_ERROR(SANITY_CHECK_FAILED, "Heap end pointer (0x%08x) is not in SRAM memory.\n",
+  //          (uint32_t) __uvisor_config.heap_end);
+   // }
     if (__uvisor_config.heap_end < __uvisor_config.heap_start) {
         HALT_ERROR(SANITY_CHECK_FAILED, "Heap end pointer (0x%08x) is smaller than heap start pointer (0x%08x).\n",
             (uint32_t) __uvisor_config.heap_end, (uint32_t) __uvisor_config.heap_start);

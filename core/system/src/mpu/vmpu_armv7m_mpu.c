@@ -320,7 +320,7 @@ MpuRegion * vmpu_region_find_for_address(uint8_t box_id, uint32_t address)
  * |    0    | <-- Application Flash unlock
  * +---------+
  */
-#define ARMv7M_MPU_REGIONS_STATIC 2
+#define ARMv7M_MPU_REGIONS_STATIC 3
 #define ARMv7M_MPU_REGIONS_MAX (ARMv7M_MPU_REGIONS)
 
 /* MPU helper macros */
